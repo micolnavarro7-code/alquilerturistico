@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    { "source": "/", "destination": "/turistico", "permanent": false }
+  ],
+  "rewrites": [
+    { "source": "/turistico", "destination": "/index.html" },
+    { "source": "/turistico/:path*", "destination": "/:path*" }
+  ]
+}
