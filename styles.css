@@ -237,18 +237,15 @@ img{ max-width:100%; }
 
 /* ---------------- proceso ---------------- */
 .steps{ position:relative; }
-.steps__track{ position:absolute; top:0; bottom:0; left:clamp(18px,2.2vw,30px); width:2px; background:var(--hair); }
-.steps__fill{ display:block; width:100%; height:var(--p,0%); background:var(--terra); transition:height .18s linear; }
 .step{ display:flex; gap:clamp(20px,3.4vw,52px); padding-block:clamp(20px,3vh,36px); opacity:.42; transition:opacity .7s var(--ease); }
 .step.is-in{ opacity:1; }
 .step__n{
-  flex:0 0 auto; width:clamp(37px,4.4vw,60px); aspect-ratio:1;
-  border:2px solid var(--hair); border-radius:50%;
+  flex:0 0 auto; width:clamp(37px,4.4vw,60px);
   display:grid; place-items:center;
   font-family:var(--display); font-size:clamp(15px,1.6vw,20px);
-  background:var(--ground); transition:border-color .6s var(--ease), color .6s var(--ease), background .6s;
+  transition:color .6s var(--ease);
 }
-.step.is-in .step__n{ border-color:var(--terra); color:#fff; background:var(--terra); }
+.step.is-in .step__n{ color:var(--terra); }
 .step h3{ font-family:var(--display); font-size:var(--t-h3); line-height:1.12; margin-bottom:6px; }
 .step p{ color:var(--ink-2); max-width:54ch; }
 

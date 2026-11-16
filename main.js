@@ -44,7 +44,6 @@
   var nav = document.getElementById('nav');
   function onScroll() {
     if (nav) nav.classList.toggle('is-stuck', window.scrollY > 24);
-    updateSteps();
   }
   window.addEventListener('scroll', onScroll, { passive: true });
 
@@ -60,19 +59,6 @@
   } else {
     reveals.forEach(function (el) { el.classList.add('is-in'); });
   }
-
-  /* -------- progreso de la línea de pasos -------- */
-  var steps = document.getElementById('steps');
-  var fill = document.getElementById('stepsFill');
-  function updateSteps() {
-    if (!steps || !fill) return;
-    var r = steps.getBoundingClientRect();
-    var vh = window.innerHeight;
-    var p = (vh * 0.5 - r.top) / r.height;
-    p = Math.max(0, Math.min(1, p));
-    fill.style.setProperty('--p', (p * 100) + '%');
-  }
-  updateSteps();
 
   /* -------- FAQ acordeón -------- */
   document.querySelectorAll('.faq__q').forEach(function (btn) {
