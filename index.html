@@ -32,6 +32,7 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Archivo:wght@300;400;500;600&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Archivo:wght@300;400;500;600&display=swap">
 <link rel="stylesheet" href="/turistico/styles.css">
+<link rel="stylesheet" href="/turistico/contacto.css">
 </head>
 <body>
 
@@ -233,12 +234,8 @@
           <input type="hidden" name="utm_content" id="utm_content">
           <input type="hidden" name="utm_term" id="utm_term">
 
-          <a class="btn btn--light wacta__btn" id="waFormBtn" href="#" target="_blank" rel="noopener">
-            <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.2 1.6 6L4 29l8.2-1.6c1.8.9 3.8 1.4 5.8 1.4 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-4.9 1 1-4.8-.3-.4c-1-1.6-1.5-3.4-1.5-5.3C4.9 9.5 9.9 4.9 16 4.9c6 0 10.1 4.8 10.1 10.1S22 24.8 16 24.8zm5.5-7.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.2-.6-.4z"/></svg>
-            Pídelo por WhatsApp
-          </a>
-          <p class="wacta__num">+34 605 44 99 16</p>
-          <p class="form__note">Sin compromiso. Te respondemos en menos de 24 h.</p>
+          <div id="aypForm" style="--ayp-accent:#C4643B;--ayp-accent-dk:#A84F2C" data-endpoint="https://script.google.com/macros/s/AKfycbzl9ZxxxqQVPvpCXLhE7NyMcdOGPaU6sVnIhneXBv6fs2II-phAViCOg-TBHNMY2JPa/exec" data-landing="Turístico" data-boton="Pide tu estudio gratis"></div>
+          <p class="ayp-wa-alt">¿Prefieres WhatsApp? <a id="waFormBtn" href="https://wa.me/34605449916" target="_blank" rel="noopener">Escríbenos al +34 605 44 99 16</a></p>
         </div>
       </div>
     </div>
@@ -310,6 +307,7 @@
 </a>
 
 <script src="/turistico/main.js"></script>
+<script src="/turistico/contacto.js"></script>
 <script>
   document.addEventListener("click", function (e) {
     var a = e.target.closest && e.target.closest("a[href]");
